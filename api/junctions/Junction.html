@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junction - junctions.js</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:site_name" content="Junctions.js" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+
+  
+    <meta name="description" content="Junctions.js - Composable routing build from the ground up for React" />
+    <meta property="og:description" content="Junctions.js - Composable routing build from the ground up for React" />
+    <meta name="twitter:description" content="Junctions.js - Composable routing build from the ground up for React" />
+  
+  
+    <meta property="og:title" content="Junction" />
+    <meta name="twitter:title" content="Junction" />
+  
+  
+    <meta property="og:image" content="https://junctions.js.org/logo.png?1" />
+    <meta name="twitter:image" content="https://junctions.js.org/logo.png?1" />
+  
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="/site-bundle.f5f606b3.css">
+  
+</head>
+<body>
+  <div id="app">
+    <div class="RootWrapper" data-reactroot="" data-reactid="1" data-react-checksum="2108880852"><div class="RootWrapper-header" data-reactid="2"><div class="RootWrapper-header-inner" data-reactid="3"><a href="/" class="RootWrapper-junctions" data-reactid="4"><div class="RootWrapper-junctions-logo" data-reactid="5"></div><!-- react-text: 6 -->Junctions<!-- /react-text --></a><a class="RootWrapper-github" href="https://github.com/jamesknelson/junctions" data-reactid="7">GitHub</a><div class="RootWrapper-links" data-reactid="8"><a href="/guide" class="RootWrapper-link " data-reactid="9">Guide</a><a href="/examples" class="RootWrapper-link " data-reactid="10">Examples</a><a href="/api" class="RootWrapper-link RootWrapper-link-active" data-reactid="11">API Reference</a></div></div></div><div class="RootWrapper-body" data-reactid="12"><div data-reactid="13"><div class="MenuWrapper" data-reactid="14"><div class="
+            MenuWrapper-sidebar
+            MenuWrapper-closed
+          " data-reactid="15"><a class="MenuWrapper-active" href="/api/junctions/Junction" data-reactid="16">Junction</a><ul class="MenuWrapper-menu" data-reactid="17"><li class="MenuWrapper-heading" data-reactid="18"><a href="/api" class="MenuWrapper-link  MenuWrapper-link-primary" data-reactid="19">About The API</a></li><li class="MenuWrapper-section" data-reactid="20"><div data-reactid="21">junctions</div><ul class="MenuWrapper-submenu" data-reactid="22"><li data-reactid="23"><a href="/api/junctions/Converter" class="MenuWrapper-link  " data-reactid="24">Converter</a></li><li data-reactid="25"><a href="/api/junctions/Junction" class="MenuWrapper-link MenuWrapper-link-active " data-reactid="26">Junction</a></li><li data-reactid="27"><a href="/api/junctions/Location" class="MenuWrapper-link  " data-reactid="28">Location</a></li><li data-reactid="29"><a href="/api/junctions/Route" class="MenuWrapper-link  " data-reactid="30">Route</a></li><li data-reactid="31"><a href="/api/junctions/createConverter" class="MenuWrapper-link  " data-reactid="32">createConverter</a></li><li data-reactid="33"><a href="/api/junctions/createJunction" class="MenuWrapper-link  " data-reactid="34">createJunction</a></li><li data-reactid="35"><a href="/api/junctions/locationsEqual" class="MenuWrapper-link  " data-reactid="36">locationsEqual</a></li><li data-reactid="37"><a href="/api/junctions/routesMatch" class="MenuWrapper-link  " data-reactid="38">routesMatch</a></li></ul></li><li class="MenuWrapper-section" data-reactid="39"><div data-reactid="40">react-junctions</div><ul class="MenuWrapper-submenu" data-reactid="41"><li data-reactid="42"><a href="/api/react-junctions/HistoryContext" class="MenuWrapper-link  " data-reactid="43">&lt;HistoryContext&gt;</a></li><li data-reactid="44"><a href="/api/react-junctions/Link" class="MenuWrapper-link  " data-reactid="45">&lt;Link&gt;</a></li><li data-reactid="46"><a href="/api/react-junctions/Router" class="MenuWrapper-link  " data-reactid="47">&lt;Router&gt;</a></li></ul></li></ul><div class="MenuWrapper-arrows" data-reactid="48"><a class="MenuWrapper-arrows-prev" href="/api/junctions/Converter" data-reactid="49">Converter</a><a class="MenuWrapper-arrows-next" href="/api/junctions/Location" data-reactid="50">Location</a></div></div><div class="MenuWrapper-body" data-reactid="51"><h1 class="MenuWrapper-title" data-reactid="52">Junction</h1><div class="MarkdownView" data-reactid="53"><div class="
+    CommunicationStateView
+    CommunicationStateView-fresh
+  " data-reactid="54"></div><div data-reactid="55"><p data-reactid="56"><!-- react-text: 57 -->Junctions are objects which represents a number of possible <!-- /react-text --><em data-reactid="58">choices</em><!-- react-text: 59 --> – for example, the choices on a tab bar, a navigation menu, or the choice between whether a modal is displayed or not.<!-- /react-text --></p><p data-reactid="60"><!-- react-text: 61 -->Within a <!-- /react-text --><code data-reactid="62">Junction</code><!-- react-text: 63 --> object, each <!-- /react-text --><em data-reactid="64">possibility</em><!-- react-text: 65 --> is represented by a <!-- /react-text --><em data-reactid="66">Branch</em><!-- react-text: 67 --> object. And within your application, a single <!-- /react-text --><em data-reactid="68">state</em><!-- react-text: 69 --> of a <!-- /react-text --><code data-reactid="70">Junction</code><!-- react-text: 71 --> is represent by a <!-- /react-text --><a href="/api/junctions/Route" data-reactid="72">Route</a><!-- react-text: 73 --> object.<!-- /react-text --></p><p data-reactid="74"><!-- react-text: 75 -->To create a <!-- /react-text --><code data-reactid="76">Junction</code><!-- react-text: 77 -->, use the <!-- /react-text --><a href="/api/junctions/createJunction" data-reactid="78">createJunction</a><!-- react-text: 79 --> function. Once you have a Junction, use its <!-- /react-text --><a href="#createroutekey-params-next" data-reactid="80">createRoute()</a><!-- react-text: 81 --> method to create <!-- /react-text --><a href="/api/junctions/Route" data-reactid="82">Route</a><!-- react-text: 83 --> objects which represent states of that Junction.<!-- /react-text --></p><p data-reactid="84"><!-- react-text: 85 -->To learn more about what Junctions are and how they’re used, read <!-- /react-text --><a href="/guide/introduction/what-you-get-from-junctions" data-reactid="86">What You Get From Junctions</a><!-- react-text: 87 --> and <!-- /react-text --><a href="/guide/basics/junctions" data-reactid="88">Junctions</a><!-- react-text: 89 --> in the Junctions Guide.<!-- /react-text --></p><h3 id="component-junctions" data-reactid="90">Component Junctions</h3><p data-reactid="91"><!-- react-text: 92 -->By adding a Junction to a Component, you’re indicating that the Component expects to receive a single <!-- /react-text --><code data-reactid="93">route</code><!-- react-text: 94 --> prop, whose value must be a <!-- /react-text --><code data-reactid="95">Route</code><!-- react-text: 96 --> object following one of the formats defined by the Junctions’s branches.<!-- /react-text --></p><pre class="language-js" data-reactid="97"><code data-reactid="98"><span class="token comment" spellcheck="true">// Create a Junction which can hold one of three Route Types</span>
+<span class="token keyword" >const</span> junction <span class="token operator" >=</span> <span class="token function" >createJunction</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+  Dashboard<span class="token punctuation" >:</span> <span class="token punctuation" >{</span> <span class="token keyword" >default</span><span class="token punctuation" >:</span> <span class="token boolean" >true</span> <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  Invoices<span class="token punctuation" >:</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  Help<span class="token punctuation" >:</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+<span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+
+<span class="token keyword" >class</span> <span class="token class-name" >ApplicationScreen</span> <span class="token keyword" >extends</span> <span class="token class-name" >React<span class="token punctuation" >.</span>Component</span> <span class="token punctuation" >{</span>
+  <span class="token comment" spellcheck="true">// By adding `junction`, you're specifying that this component should</span>
+  <span class="token comment" spellcheck="true">// receive a `Route` object on its `route` property with one of the</span>
+  <span class="token comment" spellcheck="true">// keys defined above.</span>
+  <span class="token keyword" >static</span> junction <span class="token operator" >=</span> junction
+
+  <span class="token comment" spellcheck="true">// ...</span>
+<span class="token punctuation" >}</span>
+</code></pre><p data-reactid="99"><em data-reactid="100"><!-- react-text: 101 -->See a similar in use at the <!-- /react-text --><a href="/examples/Raw" data-reactid="102">Raw</a><!-- react-text: 103 --> live example!<!-- /react-text --></em></p><h3 id="composing-junctions" data-reactid="104">Composing Junctions</h3><p data-reactid="105"><!-- react-text: 106 -->The main purpose of a Junction is to represent the possible navigation states of a single Component. But what if that Component is composed of <!-- /react-text --><em data-reactid="107">other</em><!-- react-text: 108 --> components, each of which has its own navigation states?<!-- /react-text --></p><p data-reactid="109"><!-- react-text: 110 -->As an example, imagine that the Component in the above example renders a <!-- /react-text --><code data-reactid="111">&lt;HelpScreen&gt;</code><!-- react-text: 112 --> component when the <!-- /react-text --><code data-reactid="113">Help</code><!-- react-text: 114 --> branch is selected. But then say that this <!-- /react-text --><code data-reactid="115">&lt;HelpScreen&gt;</code><!-- react-text: 116 --> component itself can take one of two possible states<!-- /react-text --><!-- react-text: 117 -->In order to represent the possible navigation states within a single component.<!-- /react-text --></p><pre class="language-js" data-reactid="118"><code data-reactid="119"><span class="token keyword" >class</span> <span class="token class-name" >HelpScreen</span> <span class="token keyword" >extends</span> <span class="token class-name" >React<span class="token punctuation" >.</span>Component</span> <span class="token punctuation" >{</span>
+  <span class="token keyword" >static</span> junction <span class="token operator" >=</span> <span class="token function" >createJunction</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+    DashboardHelp<span class="token punctuation" >:</span> <span class="token punctuation" >{</span> <span class="token keyword" >default</span><span class="token punctuation" >:</span> <span class="token boolean" >true</span> <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+    InvoicesHelp<span class="token punctuation" >:</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  <span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+<span class="token punctuation" >}</span>
+</code></pre><p data-reactid="120"><!-- react-text: 121 -->Because the <!-- /react-text --><code data-reactid="122">&lt;ApplicationScreen&gt;</code><!-- react-text: 123 --> component composes the <!-- /react-text --><code data-reactid="124">&lt;HelpScreen&gt;</code><!-- react-text: 125 -->, the possible states of <!-- /react-text --><code data-reactid="126">&lt;HelpScreen&gt;</code><!-- react-text: 127 --> are <!-- /react-text --><em data-reactid="128">also</em><!-- react-text: 129 --> possible states of <!-- /react-text --><code data-reactid="130">&lt;ApplicationScreen&gt;</code><!-- react-text: 131 --> – but <!-- /react-text --><em data-reactid="132">only</em><!-- react-text: 133 --> when <!-- /react-text --><code data-reactid="134">&lt;ApplicationState&gt;</code><!-- react-text: 135 --> is rendering a <!-- /react-text --><code data-reactid="136">Help</code><!-- react-text: 137 --> route.<!-- /react-text --></p><p data-reactid="138"><!-- react-text: 139 -->In order to represent this, each Branch within a <!-- /react-text --><code data-reactid="140">Junction</code><!-- react-text: 141 --> can also define its own <!-- /react-text --><code data-reactid="142">next</code><!-- react-text: 143 --> junction – representing the next choice which needs to be made if that branch is selected.<!-- /react-text --></p><pre class="language-js" data-reactid="144"><code data-reactid="145"><span class="token keyword" >const</span> junction <span class="token operator" >=</span> <span class="token function" >createJunction</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+  Dashboard<span class="token punctuation" >:</span> <span class="token punctuation" >{</span> <span class="token keyword" >default</span><span class="token punctuation" >:</span> <span class="token boolean" >true</span> <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  Invoices<span class="token punctuation" >:</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  Help<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+    <span class="token comment" spellcheck="true">// Indicates that if this branch is selected, a selection from</span>
+    <span class="token comment" spellcheck="true">// the help screen's junction will also need to be made</span>
+    next<span class="token punctuation" >:</span> HelpScreen<span class="token punctuation" >.</span>junction<span class="token punctuation" >,</span>
+  <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+<span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+</code></pre><p data-reactid="146"><!-- react-text: 147 -->The end result of this is that each <!-- /react-text --><code data-reactid="148">Junction</code><!-- react-text: 149 --> is effectively a <!-- /react-text --><a href="https://en.wikipedia.org/wiki/Decision_tree" data-reactid="150">Decision tree</a><!-- react-text: 151 -->. The branches at each node represent the possible things that one single component can render.<!-- /react-text --></p><h3 id="parallel-junctions" data-reactid="152">Parallel Junctions</h3><p data-reactid="153"><!-- react-text: 154 -->A single <!-- /react-text --><code data-reactid="155">Junction</code><!-- react-text: 156 --> only allows you to represent a single choice. But what if your component needs to be able to represent <!-- /react-text --><em data-reactid="157">multiple</em><!-- react-text: 158 --> choices – for example, the choice between which tab to render, and the choice between which modal to render?<!-- /react-text --></p><p data-reactid="159"><!-- react-text: 160 -->In order to facilitate this, each Branch can be assigned <!-- /react-text --><em data-reactid="161">multiple</em><!-- react-text: 162 --> <!-- /react-text --><code data-reactid="163">next</code><!-- react-text: 164 --> junctions. To do so, instead of passing a single <!-- /react-text --><code data-reactid="165">Junction</code><!-- react-text: 166 --> object to <!-- /react-text --><code data-reactid="167">next</code><!-- react-text: 168 -->, pass an object containing <!-- /react-text --><code data-reactid="169">Junction</code><!-- react-text: 170 --> objects. This will cause the <!-- /react-text --><code data-reactid="171">next</code><!-- react-text: 172 --> property of associated <!-- /react-text --><code data-reactid="173">Route</code><!-- react-text: 174 --> objects to use an object with the same shape.<!-- /react-text --></p><p data-reactid="175"><em data-reactid="176"><!-- react-text: 177 -->Note: When providing an object of parallel junctions, only the state of the junction with the key <!-- /react-text --><code data-reactid="178">main</code><!-- react-text: 179 --> will be added to the path of <!-- /react-text --><code data-reactid="180">Location</code><!-- react-text: 181 --> objects. The state of any other junctions will be added to the Location <!-- /react-text --><code data-reactid="182">state</code><!-- react-text: 183 -->.<!-- /react-text --></em></p><pre class="language-js" data-reactid="184"><code data-reactid="185"><span class="token keyword" >const</span> invoiceMainJunction <span class="token operator" >=</span> <span class="token function" >createJunction</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+  Details<span class="token punctuation" >:</span> <span class="token punctuation" >{</span> <span class="token keyword" >default</span><span class="token punctuation" >:</span> <span class="token boolean" >true</span> <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  Payments<span class="token punctuation" >:</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+<span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+
+<span class="token keyword" >const</span> invoiceModalJunction <span class="token operator" >=</span> <span class="token function" >createJunction</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+  AddPayment<span class="token punctuation" >:</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+<span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+
+<span class="token keyword" >const</span> invoicesJunction <span class="token operator" >=</span> <span class="token function" >createJunction</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+  List<span class="token punctuation" >:</span> <span class="token punctuation" >{</span> <span class="token keyword" >default</span><span class="token punctuation" >:</span> <span class="token boolean" >true</span> <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  Invoice<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+    paramTypes<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+      id<span class="token punctuation" >:</span> <span class="token punctuation" >{</span> required<span class="token punctuation" >:</span> <span class="token boolean" >true</span> <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+    next<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+      main<span class="token punctuation" >:</span> invoiceMainJunction<span class="token punctuation" >,</span>
+      modal<span class="token punctuation" >:</span> invoiceModalJunction<span class="token punctuation" >,</span>
+    <span class="token punctuation" >}</span>
+  <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+<span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+
+<span class="token keyword" >class</span> <span class="token class-name" >InvoicesScreen</span> <span class="token keyword" >extends</span> <span class="token class-name" >React<span class="token punctuation" >.</span>Component</span> <span class="token punctuation" >{</span>
+  <span class="token keyword" >static</span> junction <span class="token operator" >=</span> invoicesJunction
+
+  <span class="token function" >render</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >const</span> route <span class="token operator" >=</span> <span class="token keyword" >this</span><span class="token punctuation" >.</span>props<span class="token punctuation" >.</span>route
+
+    <span class="token keyword" >if</span> <span class="token punctuation" >(</span>route<span class="token punctuation" >.</span>key <span class="token operator" >==</span> <span class="token string" >'Invoice'</span><span class="token punctuation" >)</span> <span class="token punctuation" >{</span>
+      <span class="token comment" spellcheck="true">// When rendering an `Invoice` route, it will have *two* next routes.</span>
+      console<span class="token punctuation" >.</span><span class="token function" >log</span><span class="token punctuation" >(</span>route<span class="token punctuation" >.</span>next<span class="token punctuation" >.</span>main<span class="token punctuation" >.</span>key<span class="token punctuation" >)</span>
+      console<span class="token punctuation" >.</span><span class="token function" >log</span><span class="token punctuation" >(</span>route<span class="token punctuation" >.</span>next<span class="token punctuation" >.</span>modal<span class="token punctuation" >.</span>key<span class="token punctuation" >)</span>
+    <span class="token punctuation" >}</span>
+  <span class="token punctuation" >}</span>
+<span class="token punctuation" >}</span>
+</code></pre><h2 id="methods" data-reactid="186">Methods</h2><h3 id="createroutekey-params-next" data-reactid="187">createRoute(key, params, …next)</h3><p data-reactid="188"><!-- react-text: 189 -->Create a <!-- /react-text --><code data-reactid="190">Route</code><!-- react-text: 191 --> object representing one state of this Junction.<!-- /react-text --></p><p data-reactid="192"><!-- react-text: 193 -->Use this method when you need an arbitrary <!-- /react-text --><code data-reactid="194">Route</code><!-- react-text: 195 --> object. For example, when you’d like to link to a specific route within your current component, or when you’d like to programatically navigate to a specific route.<!-- /react-text --></p><h4 id="arguments" data-reactid="196">Arguments</h4><ul data-reactid="197"><li data-reactid="198"><code data-reactid="199">key</code><!-- react-text: 200 --> (<!-- /react-text --><em data-reactid="201">string</em><!-- react-text: 202 -->): The key of the branch which this <!-- /react-text --><code data-reactid="203">Route</code><!-- react-text: 204 --> will follow<!-- /react-text --></li><li data-reactid="205"><code data-reactid="206">params</code><!-- react-text: 207 --> <!-- /react-text --><em data-reactid="208"><small data-reactid="209">, &quot;optional&quot;,</small></em><!-- react-text: 210 --> (<!-- /react-text --><em data-reactid="211">object</em><!-- react-text: 212 -->): An object containing values of the created route’s <!-- /react-text --><code data-reactid="213">params</code></li><li data-reactid="214"><code data-reactid="215">...next</code><!-- react-text: 216 --> <!-- /react-text --><em data-reactid="217"><small data-reactid="218">, &quot;optional&quot;,</small></em><!-- react-text: 219 --> (<!-- /react-text --><em data-reactid="220"><a href="/api/junctions/Route" data-reactid="221">Route</a><!-- react-text: 222 -->]<!-- /react-text --></em><!-- react-text: 223 -->): <!-- /react-text --><code data-reactid="224">Route</code><!-- react-text: 225 --> objects representing the state of the branch’s <!-- /react-text --><code data-reactid="226">next</code><!-- react-text: 227 --> junctions<!-- /react-text --></li></ul><p data-reactid="228"><em data-reactid="229"><!-- react-text: 230 -->If you’re familiar with <!-- /react-text --><a href="https://facebook.github.io/react/docs/react-api.html#createelement" data-reactid="231">React.createElement()</a><!-- react-text: 232 -->, note that <!-- /react-text --><code data-reactid="233">createRoute()</code><!-- react-text: 234 --> uses exactly the same format. Theoretically, you could even create routes with JSX.<!-- /react-text --></em></p><h4 id="returns" data-reactid="235">Returns</h4><p data-reactid="236"><!-- react-text: 237 -->(<!-- /react-text --><em data-reactid="238"><a href="/api/junctions/Route" data-reactid="239">Route</a></em><!-- react-text: 240 -->)<!-- /react-text --></p><h4 id="example" data-reactid="241">Example</h4><p data-reactid="242">This example puts together all of the different forms of Junction, to create a single route linking deep into an application.</p><p data-reactid="243">Note that this is rather contrived. A more realistic example would have these junctions defined over multiple files, with routes mostly being created only a single level deep.</p><pre class="language-jsx" data-reactid="244"><code data-reactid="245"><span class="token keyword" >const</span> invoiceMainJunction <span class="token operator" >=</span> <span class="token function" >createJunction</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+  Details<span class="token punctuation" >:</span> <span class="token punctuation" >{</span> <span class="token keyword" >default</span><span class="token punctuation" >:</span> <span class="token boolean" >true</span> <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  Payments<span class="token punctuation" >:</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+<span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+
+<span class="token keyword" >const</span> invoiceModalJunction <span class="token operator" >=</span> <span class="token function" >createJunction</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+  AddPayment<span class="token punctuation" >:</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+<span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+
+<span class="token keyword" >const</span> invoicesJunction <span class="token operator" >=</span> <span class="token function" >createJunction</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+  Add<span class="token punctuation" >:</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  Invoice<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+    path<span class="token punctuation" >:</span> <span class="token string" >'/:id'</span><span class="token punctuation" >,</span>
+    paramTypes<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+      id<span class="token punctuation" >:</span> <span class="token punctuation" >{</span> required<span class="token punctuation" >:</span> <span class="token boolean" >true</span> <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+    next<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+      main<span class="token punctuation" >:</span> invoiceMainJunction<span class="token punctuation" >,</span>
+      modal<span class="token punctuation" >:</span> invoiceModalJunction<span class="token punctuation" >,</span>
+    <span class="token punctuation" >}</span>
+  <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+<span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+
+<span class="token keyword" >const</span> appJunction <span class="token operator" >=</span> <span class="token function" >createJunction</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+  Dashboard<span class="token punctuation" >:</span> <span class="token punctuation" >{</span> <span class="token keyword" >default</span><span class="token punctuation" >:</span> <span class="token boolean" >true</span> <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  Invoices<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+    next<span class="token punctuation" >:</span> invoicesJunction<span class="token punctuation" >,</span>
+  <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+<span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+
+<span class="token keyword" >const</span> converter <span class="token operator" >=</span> <span class="token function" >createConverter</span><span class="token punctuation" >(</span>appJunction<span class="token punctuation" >)</span>
+
+<span class="token keyword" >const</span> route <span class="token operator" >=</span>
+  appJunction<span class="token punctuation" >.</span><span class="token function" >createRoute</span><span class="token punctuation" >(</span><span class="token string" >'Invoices'</span><span class="token punctuation" >,</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+    invoicesJunction<span class="token punctuation" >.</span><span class="token function" >createRoute</span><span class="token punctuation" >(</span><span class="token string" >'Invoice'</span><span class="token punctuation" >,</span> <span class="token punctuation" >{</span> id<span class="token punctuation" >:</span> <span class="token string" >'123'</span> <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+      invoiceMainJunction<span class="token punctuation" >.</span><span class="token function" >createRoute</span><span class="token punctuation" >(</span><span class="token string" >'Details'</span><span class="token punctuation" >)</span><span class="token punctuation" >,</span>
+      invoiceModalJunction<span class="token punctuation" >.</span><span class="token function" >createRoute</span><span class="token punctuation" >(</span><span class="token string" >'AddPayment'</span><span class="token punctuation" >)</span>
+    <span class="token punctuation" >)</span>
+  <span class="token punctuation" >)</span>
+
+history<span class="token punctuation" >.</span><span class="token function" >push</span><span class="token punctuation" >(</span>converter<span class="token punctuation" >.</span><span class="token function" >locate</span><span class="token punctuation" >(</span>route<span class="token punctuation" >)</span><span class="token punctuation" >)</span>
+</code></pre></div></div><div class="MenuWrapper-arrows" data-reactid="246"><a class="MenuWrapper-arrows-prev" href="/api/junctions/Converter" data-reactid="247">Converter</a><a class="MenuWrapper-arrows-next" href="/api/junctions/Location" data-reactid="248">Location</a></div></div></div></div></div><div class="RootWrapper-footer" data-reactid="249"><!-- react-text: 250 -->Copyright © 2017 <!-- /react-text --><a href="http://www.jamesknelson.com" data-reactid="251">James K Nelson</a></div></div>
+  </div>
+
+  
+    <script type="text/javascript" src="/vendor-f52378ee390a69353100.js"></script>
+  
+    <script type="text/javascript" src="/25.docs-api-junctions-Junction-b13d9f188354dbef7cce.js"></script>
+  
+    <script type="text/javascript" src="/entry-9b95212b9ee950a577eb.js"></script>
+  
+</body>
+</html>

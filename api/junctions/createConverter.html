@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>createConverter - junctions.js</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:site_name" content="Junctions.js" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+
+  
+    <meta name="description" content="Junctions.js - Composable routing build from the ground up for React" />
+    <meta property="og:description" content="Junctions.js - Composable routing build from the ground up for React" />
+    <meta name="twitter:description" content="Junctions.js - Composable routing build from the ground up for React" />
+  
+  
+    <meta property="og:title" content="createConverter" />
+    <meta name="twitter:title" content="createConverter" />
+  
+  
+    <meta property="og:image" content="https://junctions.js.org/logo.png?1" />
+    <meta name="twitter:image" content="https://junctions.js.org/logo.png?1" />
+  
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="/site-bundle.f5f606b3.css">
+  
+</head>
+<body>
+  <div id="app">
+    <div class="RootWrapper" data-reactroot="" data-reactid="1" data-react-checksum="662549492"><div class="RootWrapper-header" data-reactid="2"><div class="RootWrapper-header-inner" data-reactid="3"><a href="/" class="RootWrapper-junctions" data-reactid="4"><div class="RootWrapper-junctions-logo" data-reactid="5"></div><!-- react-text: 6 -->Junctions<!-- /react-text --></a><a class="RootWrapper-github" href="https://github.com/jamesknelson/junctions" data-reactid="7">GitHub</a><div class="RootWrapper-links" data-reactid="8"><a href="/guide" class="RootWrapper-link " data-reactid="9">Guide</a><a href="/examples" class="RootWrapper-link " data-reactid="10">Examples</a><a href="/api" class="RootWrapper-link RootWrapper-link-active" data-reactid="11">API Reference</a></div></div></div><div class="RootWrapper-body" data-reactid="12"><div data-reactid="13"><div class="MenuWrapper" data-reactid="14"><div class="
+            MenuWrapper-sidebar
+            MenuWrapper-closed
+          " data-reactid="15"><a class="MenuWrapper-active" href="/api/junctions/createConverter" data-reactid="16">createConverter</a><ul class="MenuWrapper-menu" data-reactid="17"><li class="MenuWrapper-heading" data-reactid="18"><a href="/api" class="MenuWrapper-link  MenuWrapper-link-primary" data-reactid="19">About The API</a></li><li class="MenuWrapper-section" data-reactid="20"><div data-reactid="21">junctions</div><ul class="MenuWrapper-submenu" data-reactid="22"><li data-reactid="23"><a href="/api/junctions/Converter" class="MenuWrapper-link  " data-reactid="24">Converter</a></li><li data-reactid="25"><a href="/api/junctions/Junction" class="MenuWrapper-link  " data-reactid="26">Junction</a></li><li data-reactid="27"><a href="/api/junctions/Location" class="MenuWrapper-link  " data-reactid="28">Location</a></li><li data-reactid="29"><a href="/api/junctions/Route" class="MenuWrapper-link  " data-reactid="30">Route</a></li><li data-reactid="31"><a href="/api/junctions/createConverter" class="MenuWrapper-link MenuWrapper-link-active " data-reactid="32">createConverter</a></li><li data-reactid="33"><a href="/api/junctions/createJunction" class="MenuWrapper-link  " data-reactid="34">createJunction</a></li><li data-reactid="35"><a href="/api/junctions/locationsEqual" class="MenuWrapper-link  " data-reactid="36">locationsEqual</a></li><li data-reactid="37"><a href="/api/junctions/routesMatch" class="MenuWrapper-link  " data-reactid="38">routesMatch</a></li></ul></li><li class="MenuWrapper-section" data-reactid="39"><div data-reactid="40">react-junctions</div><ul class="MenuWrapper-submenu" data-reactid="41"><li data-reactid="42"><a href="/api/react-junctions/HistoryContext" class="MenuWrapper-link  " data-reactid="43">&lt;HistoryContext&gt;</a></li><li data-reactid="44"><a href="/api/react-junctions/Link" class="MenuWrapper-link  " data-reactid="45">&lt;Link&gt;</a></li><li data-reactid="46"><a href="/api/react-junctions/Router" class="MenuWrapper-link  " data-reactid="47">&lt;Router&gt;</a></li></ul></li></ul><div class="MenuWrapper-arrows" data-reactid="48"><a class="MenuWrapper-arrows-prev" href="/api/junctions/Route" data-reactid="49">Route</a><a class="MenuWrapper-arrows-next" href="/api/junctions/createJunction" data-reactid="50">createJunction</a></div></div><div class="MenuWrapper-body" data-reactid="51"><h1 class="MenuWrapper-title" data-reactid="52">createConverter</h1><div class="MarkdownView" data-reactid="53"><div class="
+    CommunicationStateView
+    CommunicationStateView-fresh
+  " data-reactid="54"></div><div data-reactid="55"><p data-reactid="56"><!-- react-text: 57 -->Creates a <!-- /react-text --><a href="/api/junctions/Converter" data-reactid="58">Converter</a><!-- react-text: 59 --> object to help convert between <!-- /react-text --><a href="/api/junctions/Route" data-reactid="60">Route</a><!-- react-text: 61 --> and <!-- /react-text --><a href="/api/junctions/Location" data-reactid="62">Location</a><!-- react-text: 63 --> objects.<!-- /react-text --></p><h4 id="arguments" data-reactid="64">Arguments</h4><ul data-reactid="65"><li data-reactid="66"><code data-reactid="67">junction</code><!-- react-text: 68 --> (<!-- /react-text --><em data-reactid="69"><a href="/api/junctions/Junction" data-reactid="70">Junction</a><!-- react-text: 71 --> | { [key]: <!-- /react-text --><a href="/api/junctions/Junction" data-reactid="72">Junction</a><!-- react-text: 73 --> }<!-- /react-text --></em><!-- react-text: 74 -->): The Junction or Junctions which specify the map between Route and Location.<!-- /react-text --></li><li data-reactid="75"><code data-reactid="76">baseLocation</code><!-- react-text: 77 --> <!-- /react-text --><em data-reactid="78"><small data-reactid="79">, &quot;optional&quot;,</small></em><!-- react-text: 80 --> (<!-- /react-text --><em data-reactid="81"><a href="/api/junctions/Location" data-reactid="82">Location</a></em><!-- react-text: 83 -->): Location information which must be part of every <!-- /react-text --><code data-reactid="84">Location</code><!-- react-text: 85 --> object consumed and produced by this <!-- /react-text --><code data-reactid="86">Converter</code><!-- react-text: 87 -->.<!-- /react-text --></li></ul><h4 id="returns" data-reactid="88">Returns</h4><p data-reactid="89"><!-- react-text: 90 -->(<!-- /react-text --><em data-reactid="91"><a href="/api/junctions/Converter" data-reactid="92">Converter</a></em><!-- react-text: 93 -->) A <!-- /react-text --><code data-reactid="94">Converter</code><!-- react-text: 95 --> object<!-- /react-text --></p><h4 id="examples" data-reactid="96">Examples</h4><h5 id="typical-usage" data-reactid="97">Typical Usage</h5><p data-reactid="98"><!-- react-text: 99 -->Pass a single <!-- /react-text --><a href="/api/junctions/Junction" data-reactid="100">Junction</a><!-- react-text: 101 -->, indicating that you expect <!-- /react-text --><a href="/api/junctions/Converter#routelocation" data-reactid="102">converter.route()</a><!-- react-text: 103 --> to return a single <!-- /react-text --><code data-reactid="104">Route</code><!-- react-text: 105 --> for any input <!-- /react-text --><code data-reactid="106">Location</code><!-- react-text: 107 -->.<!-- /react-text --></p><pre class="language-js" data-reactid="108"><code data-reactid="109"><span class="token comment" spellcheck="true">// Create a Converter for a single Junction</span>
+<span class="token keyword" >const</span> converter <span class="token operator" >=</span> <span class="token function" >createConverter</span><span class="token punctuation" >(</span>appJunction<span class="token punctuation" >)</span>
+</code></pre><h5 id="multiple-junctions" data-reactid="110">Multiple Junctions</h5><p data-reactid="111"><!-- react-text: 112 -->It is also possible to pass a <!-- /react-text --><em data-reactid="113">group</em><!-- react-text: 114 --> of Junctions, indicating that multiple Routes may be active simultaneously.<!-- /react-text --></p><p data-reactid="115"><!-- react-text: 116 -->Use this feature when you want to allow one component to render multiple Routes simultaneously. For example, a modal <!-- /react-text --><em data-reactid="117">and</em><!-- react-text: 118 --> a tab bar.<!-- /react-text --></p><pre class="language-js" data-reactid="119"><code data-reactid="120"><span class="token keyword" >const</span> converter <span class="token operator" >=</span> <span class="token function" >createConverter</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+
+  <span class="token comment" spellcheck="true">// This Junction represents your main navigation</span>
+  main<span class="token punctuation" >:</span> <span class="token function" >createJunction</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+    dashboard<span class="token punctuation" >:</span> <span class="token punctuation" >{</span> <span class="token keyword" >default</span><span class="token punctuation" >:</span> <span class="token boolean" >true</span> <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+    invoices<span class="token punctuation" >:</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+    contacts<span class="token punctuation" >:</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >,</span>
+
+  <span class="token comment" spellcheck="true">// This Junction allows you to overlay a modal over your entire application</span>
+  modal<span class="token punctuation" >:</span> <span class="token function" >createJunction</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+    settings<span class="token punctuation" >:</span> <span class="token punctuation" >{</span><span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  <span class="token punctuation" >}</span><span class="token punctuation" >)</span><span class="token punctuation" >,</span>
+
+<span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+</code></pre><h5 id="base-location" data-reactid="121">Base Location</h5><p data-reactid="122"><!-- react-text: 123 -->The optional <!-- /react-text --><code data-reactid="124">baseLocation</code><!-- react-text: 125 --> argument allows you to specify parts of your <!-- /react-text --><code data-reactid="126">Location</code><!-- react-text: 127 --> objects which should be ignored by <!-- /react-text --><code data-reactid="128">converter.route()</code><!-- react-text: 129 -->, and added to locations produced by <!-- /react-text --><code data-reactid="130">converter.locate()</code><!-- react-text: 131 -->.<!-- /react-text --></p><p data-reactid="132">Use this argument if your app is being served from a subdirectory, as opposed to the root of your domain.</p><pre class="language-js" data-reactid="133"><code data-reactid="134"><span class="token keyword" >const</span> baseLocation <span class="token operator" >=</span> <span class="token punctuation" >{</span>
+  pathname<span class="token punctuation" >:</span> <span class="token string" >'/blog/'</span>
+<span class="token punctuation" >}</span>
+<span class="token keyword" >const</span> converter <span class="token operator" >=</span> <span class="token function" >createConverter</span><span class="token punctuation" >(</span>appJunction<span class="token punctuation" >,</span> baseLocation<span class="token punctuation" >)</span>    
+</code></pre></div></div><div class="MenuWrapper-arrows" data-reactid="135"><a class="MenuWrapper-arrows-prev" href="/api/junctions/Route" data-reactid="136">Route</a><a class="MenuWrapper-arrows-next" href="/api/junctions/createJunction" data-reactid="137">createJunction</a></div></div></div></div></div><div class="RootWrapper-footer" data-reactid="138"><!-- react-text: 139 -->Copyright © 2017 <!-- /react-text --><a href="http://www.jamesknelson.com" data-reactid="140">James K Nelson</a></div></div>
+  </div>
+
+  
+    <script type="text/javascript" src="/vendor-f52378ee390a69353100.js"></script>
+  
+    <script type="text/javascript" src="/22.docs-api-junctions-createConverter-84c7fce9e426fff2cc5c.js"></script>
+  
+    <script type="text/javascript" src="/entry-9b95212b9ee950a577eb.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>createJunction - junctions.js</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:site_name" content="Junctions.js" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+
+  
+    <meta name="description" content="Junctions.js - Composable routing build from the ground up for React" />
+    <meta property="og:description" content="Junctions.js - Composable routing build from the ground up for React" />
+    <meta name="twitter:description" content="Junctions.js - Composable routing build from the ground up for React" />
+  
+  
+    <meta property="og:title" content="createJunction" />
+    <meta name="twitter:title" content="createJunction" />
+  
+  
+    <meta property="og:image" content="https://junctions.js.org/logo.png?1" />
+    <meta name="twitter:image" content="https://junctions.js.org/logo.png?1" />
+  
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="/site-bundle.f5f606b3.css">
+  
+</head>
+<body>
+  <div id="app">
+    <div class="RootWrapper" data-reactroot="" data-reactid="1" data-react-checksum="-48765412"><div class="RootWrapper-header" data-reactid="2"><div class="RootWrapper-header-inner" data-reactid="3"><a href="/" class="RootWrapper-junctions" data-reactid="4"><div class="RootWrapper-junctions-logo" data-reactid="5"></div><!-- react-text: 6 -->Junctions<!-- /react-text --></a><a class="RootWrapper-github" href="https://github.com/jamesknelson/junctions" data-reactid="7">GitHub</a><div class="RootWrapper-links" data-reactid="8"><a href="/guide" class="RootWrapper-link " data-reactid="9">Guide</a><a href="/examples" class="RootWrapper-link " data-reactid="10">Examples</a><a href="/api" class="RootWrapper-link RootWrapper-link-active" data-reactid="11">API Reference</a></div></div></div><div class="RootWrapper-body" data-reactid="12"><div data-reactid="13"><div class="MenuWrapper" data-reactid="14"><div class="
+            MenuWrapper-sidebar
+            MenuWrapper-closed
+          " data-reactid="15"><a class="MenuWrapper-active" href="/api/junctions/createJunction" data-reactid="16">createJunction</a><ul class="MenuWrapper-menu" data-reactid="17"><li class="MenuWrapper-heading" data-reactid="18"><a href="/api" class="MenuWrapper-link  MenuWrapper-link-primary" data-reactid="19">About The API</a></li><li class="MenuWrapper-section" data-reactid="20"><div data-reactid="21">junctions</div><ul class="MenuWrapper-submenu" data-reactid="22"><li data-reactid="23"><a href="/api/junctions/Converter" class="MenuWrapper-link  " data-reactid="24">Converter</a></li><li data-reactid="25"><a href="/api/junctions/Junction" class="MenuWrapper-link  " data-reactid="26">Junction</a></li><li data-reactid="27"><a href="/api/junctions/Location" class="MenuWrapper-link  " data-reactid="28">Location</a></li><li data-reactid="29"><a href="/api/junctions/Route" class="MenuWrapper-link  " data-reactid="30">Route</a></li><li data-reactid="31"><a href="/api/junctions/createConverter" class="MenuWrapper-link  " data-reactid="32">createConverter</a></li><li data-reactid="33"><a href="/api/junctions/createJunction" class="MenuWrapper-link MenuWrapper-link-active " data-reactid="34">createJunction</a></li><li data-reactid="35"><a href="/api/junctions/locationsEqual" class="MenuWrapper-link  " data-reactid="36">locationsEqual</a></li><li data-reactid="37"><a href="/api/junctions/routesMatch" class="MenuWrapper-link  " data-reactid="38">routesMatch</a></li></ul></li><li class="MenuWrapper-section" data-reactid="39"><div data-reactid="40">react-junctions</div><ul class="MenuWrapper-submenu" data-reactid="41"><li data-reactid="42"><a href="/api/react-junctions/HistoryContext" class="MenuWrapper-link  " data-reactid="43">&lt;HistoryContext&gt;</a></li><li data-reactid="44"><a href="/api/react-junctions/Link" class="MenuWrapper-link  " data-reactid="45">&lt;Link&gt;</a></li><li data-reactid="46"><a href="/api/react-junctions/Router" class="MenuWrapper-link  " data-reactid="47">&lt;Router&gt;</a></li></ul></li></ul><div class="MenuWrapper-arrows" data-reactid="48"><a class="MenuWrapper-arrows-prev" href="/api/junctions/createConverter" data-reactid="49">createConverter</a><a class="MenuWrapper-arrows-next" href="/api/junctions/locationsEqual" data-reactid="50">locationsEqual</a></div></div><div class="MenuWrapper-body" data-reactid="51"><h1 class="MenuWrapper-title" data-reactid="52">createJunction</h1><div class="MarkdownView" data-reactid="53"><div class="
+    CommunicationStateView
+    CommunicationStateView-fresh
+  " data-reactid="54"></div><div data-reactid="55"><p data-reactid="56"><!-- react-text: 57 -->Creates a <!-- /react-text --><a href="/api/junctions/Junction" data-reactid="58">Junction</a><!-- react-text: 59 --> object to specify the possible types of <!-- /react-text --><a href="/api/junctions/Route" data-reactid="60">Route</a><!-- react-text: 61 --> which a component can handle. For more details on Junctions, see the <!-- /react-text --><a href="/guide/introduction/what-you-get-from-junctions" data-reactid="62">What You Get From Junctions</a><!-- react-text: 63 --> or <!-- /react-text --><a href="/guide/basics/junctions" data-reactid="64">Junctions</a><!-- react-text: 65 --> articles in the Guide.<!-- /react-text --></p><h4 id="arguments" data-reactid="66">Arguments</h4><p data-reactid="67"><!-- react-text: 68 -->Accepts an object of <!-- /react-text --><em data-reactid="69">branches</em><!-- react-text: 70 -->, which define the types of <!-- /react-text --><code data-reactid="71">Route</code><!-- react-text: 72 --> which a component can render. The object keys are used to uniquely identify each route type.<!-- /react-text --></p><pre class="language-js" data-reactid="73"><code data-reactid="74"><span class="token punctuation" >{</span>
+  <span class="token punctuation" >[</span>key<span class="token punctuation" >]</span><span class="token punctuation" >:</span> Branch<span class="token punctuation" >,</span>
+<span class="token punctuation" >}</span>
+</code></pre><h5 id="branch" data-reactid="75">Branch</h5><p data-reactid="76"><!-- react-text: 77 -->Each <!-- /react-text --><code data-reactid="78">Branch</code><!-- react-text: 79 --> object contains configuration for one type of <!-- /react-text --><code data-reactid="80">Route</code><!-- react-text: 81 -->. It can include any of the following properties:<!-- /react-text --></p><ul data-reactid="82"><li data-reactid="83"><p data-reactid="84"><code data-reactid="85">data</code><!-- react-text: 86 --> (<!-- /react-text --><em data-reactid="87">object</em><!-- react-text: 88 -->)<!-- /react-text --></p><p data-reactid="89">Stores application-specific data, such as a Component used to render routes of this type.</p></li><li data-reactid="90"><p data-reactid="91"><code data-reactid="92">default</code><!-- react-text: 93 --> (<!-- /react-text --><em data-reactid="94">boolean</em><!-- react-text: 95 -->)<!-- /react-text --></p><p data-reactid="96"><!-- react-text: 97 -->If true, the Junction will default to this branch if no route is known. If a Junction does not specify a default, its state will default to <!-- /react-text --><code data-reactid="98">null</code><!-- react-text: 99 -->.<!-- /react-text --></p></li><li data-reactid="100"><p data-reactid="101"><code data-reactid="102">next</code><!-- react-text: 103 --> (<!-- /react-text --><em data-reactid="104"><a href="/api/junctions/Junction" data-reactid="105">Junction</a><!-- react-text: 106 --> | { [key]: <!-- /react-text --><a href="/api/junctions/Junction" data-reactid="107">Junction</a><!-- react-text: 108 --> }<!-- /react-text --></em><!-- react-text: 109 -->)<!-- /react-text --></p><p data-reactid="110"><!-- react-text: 111 -->Specifies the subsequent types of routes which a route of this type can take. Like <!-- /react-text --><a href="/api/junctions/createConverter" data-reactid="112">createConverter</a><!-- react-text: 113 -->, specifying an object of Junctions will allow for one <!-- /react-text --><code data-reactid="114">Route</code><!-- react-text: 115 --> from each <!-- /react-text --><code data-reactid="116">Junction</code><!-- react-text: 117 --> to be active simultaneously.<!-- /react-text --></p></li><li data-reactid="118"><p data-reactid="119"><code data-reactid="120">paramTypes</code><!-- react-text: 121 --> (<!-- /react-text --><em data-reactid="122">{ [key]: Param }</em><!-- react-text: 123 -->)<!-- /react-text --></p><p data-reactid="124">Configures the parameters for routes of this type.</p></li><li data-reactid="125"><p data-reactid="126"><code data-reactid="127">path</code><!-- react-text: 128 --> (<!-- /react-text --><em data-reactid="129">string</em><!-- react-text: 130 -->)<!-- /react-text --></p><p data-reactid="131">Specifies how routes of this type should be represented in URLs. If not specified, a default will be generated based on the branch’s key and required param types.</p></li></ul><h5 id="param" data-reactid="132">Param</h5><p data-reactid="133">Each parameter requires a configuration object. It can be blank, or it can have any combination of the following properties:</p><ul data-reactid="134"><li data-reactid="135"><p data-reactid="136"><code data-reactid="137">required</code><!-- react-text: 138 --> (<!-- /react-text --><em data-reactid="139">boolean</em><!-- react-text: 140 -->)<!-- /react-text --></p><p data-reactid="141">If true, routes of this type cannot be created without this parameter.</p></li><li data-reactid="142"><p data-reactid="143"><code data-reactid="144">default</code><!-- react-text: 145 --> (<!-- /react-text --><em data-reactid="146">value | function</em><!-- react-text: 147 -->)<!-- /react-text --></p><p data-reactid="148"><!-- react-text: 149 -->If specified, routes which are not supplied with this parameter will be given a default value. If not specified, the parameter will default to <!-- /react-text --><code data-reactid="150">undefined</code><!-- react-text: 151 -->.<!-- /react-text --></p></li><li data-reactid="152"><p data-reactid="153"><code data-reactid="154">serializer</code><!-- react-text: 155 --> (<!-- /react-text --><em data-reactid="156">{ serialize, deserialize }</em><!-- react-text: 157 -->)<!-- /react-text --></p><p data-reactid="158">Define how this parameter’s values should be converted to and from strings such as URL components.</p></li></ul><h4 id="example" data-reactid="159">Example</h4><pre class="language-js" data-reactid="160"><code data-reactid="161"><span class="token keyword" >const</span> appJunction <span class="token operator" >=</span> <span class="token function" >createJunction</span><span class="token punctuation" >(</span><span class="token punctuation" >{</span>
+  Home<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+    <span class="token keyword" >default</span><span class="token punctuation" >:</span> <span class="token boolean" >true</span><span class="token punctuation" >,</span>
+    path<span class="token punctuation" >:</span> <span class="token string" >'/dashboard'</span><span class="token punctuation" >,</span>
+    data<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+      Component<span class="token punctuation" >:</span> DashboardScreen<span class="token punctuation" >,</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+
+  Contacts<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+    paramTypes<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+      page<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+        <span class="token keyword" >default</span><span class="token punctuation" >:</span> <span class="token number" >1</span><span class="token punctuation" >,</span>
+        serializer<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+          serialize<span class="token punctuation" >:</span> <span class="token punctuation" >(</span>x<span class="token punctuation" >)</span> <span class="token operator" >=</span><span class="token operator" >></span> x <span class="token operator" >?</span> <span class="token function" >String</span><span class="token punctuation" >(</span>x<span class="token punctuation" >)</span> <span class="token punctuation" >:</span> <span class="token string" >''</span><span class="token punctuation" >,</span>
+          deserialize<span class="token punctuation" >:</span> <span class="token punctuation" >(</span>x<span class="token punctuation" >)</span> <span class="token operator" >=</span><span class="token operator" >></span> x <span class="token operator" >===</span> <span class="token string" >''</span> <span class="token operator" >?</span> <span class="token keyword" >null</span> <span class="token punctuation" >:</span> window<span class="token punctuation" >.</span><span class="token function" >parseInt</span><span class="token punctuation" >(</span>x<span class="token punctuation" >)</span><span class="token punctuation" >,</span>
+        <span class="token punctuation" >}</span>
+      <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+    children<span class="token punctuation" >:</span> ContactsScreen<span class="token punctuation" >.</span>junctions<span class="token punctuation" >,</span>
+    data<span class="token punctuation" >:</span> <span class="token punctuation" >{</span>
+      Component<span class="token punctuation" >:</span> ContactsScreen<span class="token punctuation" >,</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+  <span class="token punctuation" >}</span>
+<span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+</code></pre></div></div><div class="MenuWrapper-arrows" data-reactid="162"><a class="MenuWrapper-arrows-prev" href="/api/junctions/createConverter" data-reactid="163">createConverter</a><a class="MenuWrapper-arrows-next" href="/api/junctions/locationsEqual" data-reactid="164">locationsEqual</a></div></div></div></div></div><div class="RootWrapper-footer" data-reactid="165"><!-- react-text: 166 -->Copyright © 2017 <!-- /react-text --><a href="http://www.jamesknelson.com" data-reactid="167">James K Nelson</a></div></div>
+  </div>
+
+  
+    <script type="text/javascript" src="/vendor-f52378ee390a69353100.js"></script>
+  
+    <script type="text/javascript" src="/21.docs-api-junctions-createJunction-a80c939fa0e1502b7dd9.js"></script>
+  
+    <script type="text/javascript" src="/entry-9b95212b9ee950a577eb.js"></script>
+  
+</body>
+</html>
